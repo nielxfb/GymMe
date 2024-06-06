@@ -123,13 +123,13 @@ namespace GymMe.Views
 		protected global::System.Web.UI.WebControls.Label LblDOB;
 
 		/// <summary>
-		/// DOB control.
+		/// TxtDOB control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Calendar DOB;
+		protected global::System.Web.UI.WebControls.TextBox TxtDOB;
 
 		/// <summary>
 		/// LblError control.

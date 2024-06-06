@@ -69,6 +69,15 @@ namespace GymMe.Views
 		protected global::System.Web.UI.WebControls.CheckBox ChkRememberMe;
 
 		/// <summary>
+		/// LblRememberMe control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label LblRememberMe;
+
+		/// <summary>
 		/// LblError control.
 		/// </summary>
 		/// <remarks>

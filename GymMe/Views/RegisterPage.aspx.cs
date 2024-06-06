@@ -28,7 +28,7 @@ namespace GymMe.Views
         {
 			string username = TxtUsername.Text;
 			string userEmail = TxtEmail.Text;
-			DateTime userDob = DOB.SelectedDate;
+			string userDob = TxtDOB.Text;
 			string userGender = DDLGender.SelectedValue;
 			string userPassword = TxtPassword.Text;
 			string confPassword = TxtConfirmPassword.Text;
