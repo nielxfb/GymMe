@@ -14,8 +14,6 @@ namespace GymMe.Views
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			LblError.ForeColor = System.Drawing.Color.Red;
-
 			if (Session["user"] == null && Request.Cookies["user_cookie"] == null)
 			{
 				Response.Redirect("~/Views/LoginPage.aspx");
@@ -60,7 +58,7 @@ namespace GymMe.Views
 
 				MsSupplement supplement = response.Data;
 				TxtName.Text = supplement.SupplementName;
-				TxtExpiry.Text = supplement.SupplementExpiryDate.ToShortDateString();
+				TxtExpiry.Text = string.Format("{0:yyyy-MM-dd}", supplement.SupplementExpiryDate);
 				TxtPrice.Text = supplement.SupplementPrice.ToString();
 				DDLType.SelectedValue = supplement.SupplementTypeID.ToString();
 			}
@@ -86,12 +84,21 @@ namespace GymMe.Views
 
 		protected void LBBack_Click(object sender, EventArgs e)
 		{
-
+			Response.Redirect("~/Views/ManageSupplement.aspx");
 		}
 
 		protected void BtnUpdate_Click(object sender, EventArgs e)
 		{
+			int id = int.Parse(Request["Id"]);
+			string name = TxtName.Text;
+			string expiry = TxtExpiry.Text;
+			int price = int.Parse(TxtPrice.Text);
+			int typeID = int.Parse(DDLType.SelectedValue);
 
+			Response<MsSupplement> response = SupplementController.UpdateSupplement(id, name, expiry, price, typeID);
+
+			LblError.Text = response.Message;
+			LblError.ForeColor = (response.Success) ? System.Drawing.Color.Blue : System.Drawing.Color.Red;
 		}
 	}
 }

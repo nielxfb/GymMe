@@ -59,19 +59,50 @@ namespace GymMe.Handlers
 			return new Response<MsUser>(true, "User found", user);
 		}
 
-		public static Response<MsUser> UpdateUser(int id, string username, string email, string password, DateTime dob, string gender, string role)
+		public static Response<MsUser> UpdateUserProfile(int id, string username, string email, string gender, DateTime dob)
 		{
-			MsUser user = UserRepository.GetUserById(id);
+			MsUser oldUser = UserRepository.GetUserById(id);
 
-			if (user == null)
+			if (oldUser == null)
 			{
 				return new Response<MsUser>(false, "User not found", null);
 			}
 
-			MsUser newUser = UserFactory.CreateUser(username, email, dob, gender, role, password);
+			MsUser newUser = UserFactory.CreateUser(username, email, dob, gender, oldUser.UserRole, oldUser.UserPassword);
 			newUser.UserID = id;
 
-			UserRepository.UpdateUser(newUser);
+			bool updated = UserRepository.UpdateUser(newUser);
+
+			if (!updated)
+			{
+				return new Response<MsUser>(false, "Failed to update user", null);
+			}
+
+			return new Response<MsUser>(true, "Successfully updated user!", newUser);
+		}
+
+		public static Response<MsUser> UpdateUserPassword(int id, string oldPassword, string newPassword)
+		{
+			MsUser oldUser = UserRepository.GetUserById(id);
+
+			if (oldUser == null)
+			{
+				return new Response<MsUser>(false, "User not found", null);
+			}
+
+			if (!oldUser.UserPassword.Equals(oldPassword))
+			{
+				return new Response<MsUser>(false, "Invalid credentials", null);
+			}
+
+			MsUser newUser = UserFactory.CreateUser(oldUser.UserName, oldUser.UserEmail, oldUser.UserDOB, oldUser.UserGender, oldUser.UserRole, newPassword);
+			newUser.UserID = id;
+
+			bool updated = UserRepository.UpdateUser(newUser);
+
+			if (!updated) {
+				return new Response<MsUser>(false, "Failed to update user", null);
+			}
 
 			return new Response<MsUser>(true, "Successfully updated user!", newUser);
 		}

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" class="w-100 h-100">
 <head runat="server">
-    <title></title>
+    <title>GymMe - Register</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body class="w-100 h-100 d-flex justify-content-center align-items-center">

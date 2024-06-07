@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layouts/Navbar.Master" AutoEventWireup="true" CodeBehind="UpdateSupplement.aspx.cs" Inherits="GymMe.Views.UpdateSupplement" %>
+﻿<%@ Page Title="GymMe - Update Supplement" Language="C#" MasterPageFile="~/Layouts/Navbar.Master" AutoEventWireup="true" CodeBehind="UpdateSupplement.aspx.cs" Inherits="GymMe.Views.UpdateSupplement" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:LinkButton ID="LBBack" runat="server" CssClass="align-items-start w-100  text-black" OnClick="LBBack_Click">&lt; Back to Manage Supplement</asp:LinkButton>
+    <asp:LinkButton ID="LBBack" runat="server" CssClass="align-items-start w-100 text-black" OnClick="LBBack_Click">&lt; Back to Manage Supplement</asp:LinkButton>
     <h1>Update Supplement</h1>
     <div class="d-flex flex-column align-items-start justify-content-center w-100">
         <asp:Label ID="LblName" runat="server" Text="Supplement Name" CssClass="form-label"></asp:Label>

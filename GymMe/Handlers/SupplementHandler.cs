@@ -4,6 +4,7 @@ using GymMe.Modules;
 using GymMe.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Caching;
@@ -33,16 +34,15 @@ namespace GymMe.Handlers
 
 		public static Response<MsSupplement> UpdateSupplement(int id, string name, DateTime expiry, int price, int typeID)
 		{
-			MsSupplement oldSupplement = SupplementRepository.GetSupplementById(id);
-
-			if (oldSupplement == null)
-			{
-				return new Response<MsSupplement>(false, "Supplement not found", null);
-			}
-
 			MsSupplement newSupplement = SupplementFactory.CreateSupplement(name, expiry, price, typeID);
 			newSupplement.SupplementID = id;
-			SupplementRepository.UpdateSupplement(newSupplement);
+
+			bool updated = SupplementRepository.UpdateSupplement(newSupplement);
+
+			if (!updated)
+			{
+				return new Response<MsSupplement>(false, "Failed to update supplement", null);
+			}
 
 			return new Response<MsSupplement>(true, "Successfully updated supplement", newSupplement);
 		}
@@ -57,6 +57,18 @@ namespace GymMe.Handlers
 			}
 
 			return new Response<MsSupplement>(true, "Supplement found", supplement);
+		}
+
+		public static Response<MsSupplement> DeleteSupplement(int supplementID)
+		{
+			bool deleted = SupplementRepository.DeleteSupplement(supplementID);
+
+			if (!deleted)
+			{
+				return new Response<MsSupplement>(false, "Supplement not found", null);
+			}
+
+			return new Response<MsSupplement>(true, "Successfully deleted supplement", null);
 		}
 	}
 }

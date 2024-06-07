@@ -27,14 +27,28 @@ namespace GymMe.Handlers
 		{
 			TransactionHeader header = TransactionRepository.GetHeaderById(id);
 
+			String error = "";
 			if (header == null)
 			{
-				return new Response<TransactionHeader>(false, "Transaction not found", null);
+				error = "Transaction not found";
+			}
+			else if (header.Status.Equals(status))
+			{
+				error = "Transaction already handled";
 			}
 
-			header.Status = status;
+            if (error != "")
+            {
+				return new Response<TransactionHeader>(false, error, null);
+            }
 
-			TransactionRepository.UpdateTransactionHeader(header);
+            header.Status = status;
+			bool updated = TransactionRepository.UpdateTransactionHeader(header);
+
+			if (!updated)
+			{
+				return new Response<TransactionHeader>(false, "Failed to update status", null);
+			}
 
 			return new Response<TransactionHeader>(true, "Successfully updated status", header);
 		}

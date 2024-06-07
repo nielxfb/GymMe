@@ -20,14 +20,22 @@ namespace GymMe.Repositories
 			return db.TransactionHeaders.Find(id);
 		}
 
-		public static void UpdateTransactionHeader(TransactionHeader newTransaction)
+		public static bool UpdateTransactionHeader(TransactionHeader newTransaction)
 		{
 			LocalDatabaseEntities db = DatabaseSingleton.GetInstance();
 			TransactionHeader oldTransaction = db.TransactionHeaders.Find(newTransaction.TransactionID);
+
+			if (oldTransaction == null)
+			{
+				return false;
+			}
+
 			oldTransaction.UserID = newTransaction.UserID;
 			oldTransaction.TransactionDate = newTransaction.TransactionDate;
 			oldTransaction.Status = newTransaction.Status;
 			db.SaveChanges();
+
+			return true;
 		}
 
 		public static void AddHeader(TransactionHeader header)

@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\homepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\homepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\layouts\\navbar.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\layouts\\navbar.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\profilepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\profilepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\profilepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\profilepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\updatesupplement.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\updatesupplement.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\updatesupplement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\updatesupplement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\insertsupplement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\insertsupplement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\handlers\\userhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\handlers\\userhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\insertsupplement.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\views\\insertsupplement.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\insertsupplement.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\controllers\\supplementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\handlers\\transactionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\handlers\\transactionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\views\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\controllers\\supplementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\controllers\\supplementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\handlers\\supplementhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\handlers\\supplementhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\homepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\homepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,85 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InsertSupplement.aspx",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\InsertSupplement.aspx",
-              "RelativeDocumentMoniker": "GymMe\\Views\\InsertSupplement.aspx",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\InsertSupplement.aspx",
-              "RelativeToolTip": "GymMe\\Views\\InsertSupplement.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-07T12:22:19.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InsertSupplement.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\InsertSupplement.aspx.cs",
-              "RelativeDocumentMoniker": "GymMe\\Views\\InsertSupplement.aspx.cs",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\InsertSupplement.aspx.cs",
-              "RelativeToolTip": "GymMe\\Views\\InsertSupplement.aspx.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAYwEQAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T12:22:17.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SupplementHandler.cs",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Handlers\\SupplementHandler.cs",
-              "RelativeDocumentMoniker": "GymMe\\Handlers\\SupplementHandler.cs",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Handlers\\SupplementHandler.cs",
-              "RelativeToolTip": "GymMe\\Handlers\\SupplementHandler.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAuwDoAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T12:18:05.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SupplementController.cs",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Controllers\\SupplementController.cs",
-              "RelativeDocumentMoniker": "GymMe\\Controllers\\SupplementController.cs",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Controllers\\SupplementController.cs",
-              "RelativeToolTip": "GymMe\\Controllers\\SupplementController.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAFgAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T12:17:30.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomePage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\HomePage.aspx.cs",
-              "RelativeDocumentMoniker": "GymMe\\Views\\HomePage.aspx.cs",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\HomePage.aspx.cs",
-              "RelativeToolTip": "GymMe\\Views\\HomePage.aspx.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAkwC0AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T12:13:32.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateSupplement.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\UpdateSupplement.aspx.cs",
-              "RelativeDocumentMoniker": "GymMe\\Views\\UpdateSupplement.aspx.cs",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\UpdateSupplement.aspx.cs",
-              "RelativeToolTip": "GymMe\\Views\\UpdateSupplement.aspx.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAkwEAAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T12:12:23.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "UpdateSupplement.aspx",
               "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\UpdateSupplement.aspx",
               "RelativeDocumentMoniker": "GymMe\\Views\\UpdateSupplement.aspx",
@@ -144,7 +82,137 @@
               "RelativeToolTip": "GymMe\\Views\\UpdateSupplement.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-07T12:12:16.85Z",
+              "WhenOpened": "2024-06-07T16:26:00.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserHandler.cs",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Handlers\\UserHandler.cs",
+              "RelativeDocumentMoniker": "GymMe\\Handlers\\UserHandler.cs",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Handlers\\UserHandler.cs",
+              "RelativeToolTip": "GymMe\\Handlers\\UserHandler.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAiwD0AAAB1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T16:15:49.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\HomePage.aspx.cs",
+              "RelativeDocumentMoniker": "GymMe\\Views\\HomePage.aspx.cs",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\HomePage.aspx.cs",
+              "RelativeToolTip": "GymMe\\Views\\HomePage.aspx.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCMAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T16:03:11.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfilePage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ProfilePage.aspx.cs",
+              "RelativeDocumentMoniker": "GymMe\\Views\\ProfilePage.aspx.cs",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ProfilePage.aspx.cs",
+              "RelativeToolTip": "GymMe\\Views\\ProfilePage.aspx.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAA5wEcAAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T16:03:06.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InsertSupplement.aspx",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\InsertSupplement.aspx",
+              "RelativeDocumentMoniker": "GymMe\\Views\\InsertSupplement.aspx",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\InsertSupplement.aspx",
+              "RelativeToolTip": "GymMe\\Views\\InsertSupplement.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-07T15:59:19.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TransactionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Handlers\\TransactionHandler.cs",
+              "RelativeDocumentMoniker": "GymMe\\Handlers\\TransactionHandler.cs",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Handlers\\TransactionHandler.cs",
+              "RelativeToolTip": "GymMe\\Handlers\\TransactionHandler.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwC0AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T15:56:52.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomePage.aspx",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\HomePage.aspx",
+              "RelativeDocumentMoniker": "GymMe\\Views\\HomePage.aspx",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\HomePage.aspx",
+              "RelativeToolTip": "GymMe\\Views\\HomePage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-07T15:55:05.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfilePage.aspx",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ProfilePage.aspx",
+              "RelativeDocumentMoniker": "GymMe\\Views\\ProfilePage.aspx",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ProfilePage.aspx",
+              "RelativeToolTip": "GymMe\\Views\\ProfilePage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-07T15:26:00.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SupplementController.cs",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Controllers\\SupplementController.cs",
+              "RelativeDocumentMoniker": "GymMe\\Controllers\\SupplementController.cs",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Controllers\\SupplementController.cs",
+              "RelativeToolTip": "GymMe\\Controllers\\SupplementController.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAwwE4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T15:19:43.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "GymMe\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Controllers\\UserController.cs",
+              "RelativeToolTip": "GymMe\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAAASwH4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T15:19:25.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Navbar.Master.cs",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Layouts\\Navbar.Master.cs",
+              "RelativeDocumentMoniker": "GymMe\\Layouts\\Navbar.Master.cs",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Layouts\\Navbar.Master.cs",
+              "RelativeToolTip": "GymMe\\Layouts\\Navbar.Master.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwDgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T15:18:27.173Z",
               "EditorCaption": ""
             }
           ]

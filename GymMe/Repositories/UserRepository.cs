@@ -33,10 +33,16 @@ namespace GymMe.Repositories
 			return db.MsUsers.Find(id);
 		}
 
-		public static void UpdateUser(MsUser newUser)
+		public static bool UpdateUser(MsUser newUser)
 		{
 			LocalDatabaseEntities db = DatabaseSingleton.GetInstance();
 			MsUser oldUser = db.MsUsers.Find(newUser.UserID);
+
+			if (oldUser == null)
+			{
+				return false;
+			}
+
 			oldUser.UserName = newUser.UserName;
 			oldUser.UserEmail = newUser.UserEmail;
 			oldUser.UserDOB = newUser.UserDOB;
@@ -44,6 +50,8 @@ namespace GymMe.Repositories
 			oldUser.UserRole = newUser.UserRole;
 			oldUser.UserPassword = newUser.UserPassword;
 			db.SaveChanges();
+
+			return true;
 		}
 
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layouts/Navbar.Master" AutoEventWireup="true" CodeBehind="InsertSupplement.aspx.cs" Inherits="GymMe.Views.InsertSupplement" %>
+﻿<%@ Page Title="GymMe - Insert Supplement" Language="C#" MasterPageFile="~/Layouts/Navbar.Master" AutoEventWireup="true" CodeBehind="InsertSupplement.aspx.cs" Inherits="GymMe.Views.InsertSupplement" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

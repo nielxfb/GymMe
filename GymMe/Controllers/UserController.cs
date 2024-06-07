@@ -84,10 +84,10 @@ namespace GymMe.Controllers
 			return UserHandler.GetUserById(id);
 		}
 
-		public static Response<MsUser> UpdateUser(int id, string username, string userEmail, string userGender, DateTime userDob, string role, string userPassword, string confPassword)
+		public static Response<MsUser> UpdateUserProfile(int id, string username, string email, string gender, string dob)
 		{
 			string error = "";
-			if (id == 0 || username == "" || userEmail == "" || userDob.Equals(DateTime.MinValue) || userGender == "" || userPassword == "" || confPassword == "")
+			if (id == 0 || username == "" || email == "" || gender == "" || dob == "")
 			{
 				error = "All fields are required";
 			}
@@ -95,21 +95,13 @@ namespace GymMe.Controllers
 			{
 				error = "Username must be between 5 and 15 characters";
 			}
-			else if (!userEmail.EndsWith(".com"))
+			else if (!email.EndsWith(".com"))
 			{
 				error = "Email must end with .com";
 			}
-			else if (userGender != "Male" && userGender != "Female")
+			else if (gender != "Male" && gender != "Female")
 			{
 				error = "User gender invalid";
-			}
-			else if (!IsAlphanumeric(userPassword))
-			{
-				error = "Password must be alphanumeric";
-			}
-			else if (userPassword != confPassword)
-			{
-				error = "Passwords do not match";
 			}
 
 			if (error != "")
@@ -117,7 +109,27 @@ namespace GymMe.Controllers
 				return new Response<MsUser>(false, error, null);
 			}
 
-			return UserHandler.UpdateUser(id, username, userEmail, userPassword, userDob, userGender, role);
+			return UserHandler.UpdateUserProfile(id, username, email, gender, DateTime.Parse(dob));
+		}
+
+		public static Response<MsUser> UpdateUserPassword(int id, string oldPassword, string newPassword)
+		{
+			string error = "";
+			if (id == 0 || oldPassword == "" || newPassword == "")
+			{
+				error = "All fields are required";
+			}
+			else if (!IsAlphanumeric(newPassword))
+			{
+				error = "Password must be alphanumeric";
+			}
+
+			if (error != "")
+			{
+				return new Response<MsUser>(false, error, null);
+			}
+
+			return UserHandler.UpdateUserPassword(id, oldPassword, newPassword);
 		}
 
 		public static Response<MsUser> LoginUserByCookie(string cookie)

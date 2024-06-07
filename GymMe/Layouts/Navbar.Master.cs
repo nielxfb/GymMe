@@ -64,7 +64,7 @@ namespace GymMe.Layouts
 
 		protected void LBProfile_Click(object sender, EventArgs e)
 		{
-
+			Response.Redirect("~/Views/ProfilePage.aspx");
 		}
 
 		protected void LBLogOut_Click(object sender, EventArgs e)
@@ -93,12 +93,12 @@ namespace GymMe.Layouts
 
 		protected void LBOrderQueue_Click(object sender, EventArgs e)
 		{
-
+			Response.Redirect("~/Views/OrderQueuePage.aspx");
 		}
 
 		protected void LBProfile1_Click(object sender, EventArgs e)
 		{
-
+			Response.Redirect("~/Views/ProfilePage.aspx");
 		}
 
 		protected void LBTReport_Click(object sender, EventArgs e)

@@ -14,8 +14,6 @@ namespace GymMe.Views
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			LblError.ForeColor = System.Drawing.Color.Red;
-
 			if (Session["user"] == null && Request.Cookies["user_cookie"] == null)
 			{
 				Response.Redirect("~/Views/LoginPage.aspx");
@@ -63,5 +61,24 @@ namespace GymMe.Views
         {
 			Response.Redirect("~/Views/InsertSupplement.aspx");
         }
-    }
+
+		protected void GVSupplement_RowDeleting(object sender, GridViewDeleteEventArgs e)
+		{
+			GridViewRow row = GVSupplement.Rows[e.RowIndex];
+			int id = int.Parse(row.Cells[0].Text);
+
+			Response<MsSupplement> response = SupplementController.DeleteSupplement(id);
+
+			LblError.Text = response.Message;
+			LblError.ForeColor = (response.Success) ? System.Drawing.Color.Blue : System.Drawing.Color.Red;
+			RefreshGridview();
+		}
+
+		protected void GVSupplement_RowUpdating(object sender, GridViewUpdateEventArgs e)
+		{
+			GridViewRow row = GVSupplement.Rows[e.RowIndex];
+			int id = int.Parse(row.Cells[0].Text);
+			Response.Redirect("~/Views/UpdateSupplement.aspx?Id=" + id);
+		}
+	}
 }

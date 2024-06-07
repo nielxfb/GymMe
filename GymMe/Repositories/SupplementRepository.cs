@@ -27,15 +27,40 @@ namespace GymMe.Repositories
 			return db.MsSupplements.Find(id);
 		}
 
-		public static void UpdateSupplement(MsSupplement newSupplement)
+		public static bool UpdateSupplement(MsSupplement newSupplement)
 		{
 			LocalDatabaseEntities db = DatabaseSingleton.GetInstance();
 			MsSupplement oldSupplement = db.MsSupplements.Find(newSupplement.SupplementID);
+
+			if (oldSupplement == null)
+			{
+				return false;
+			}
+
 			oldSupplement.SupplementName = newSupplement.SupplementName;
 			oldSupplement.SupplementExpiryDate = newSupplement.SupplementExpiryDate;
 			oldSupplement.SupplementPrice = newSupplement.SupplementPrice;
 			oldSupplement.SupplementTypeID = newSupplement.SupplementTypeID;
 			db.SaveChanges();
+
+			return true;
+		}
+
+		public static bool DeleteSupplement(int supplementID)
+		{
+			LocalDatabaseEntities db = DatabaseSingleton.GetInstance();
+
+			MsSupplement deleted = db.MsSupplements.Find(supplementID);
+
+			if (deleted == null)
+			{
+				return false;
+			}
+
+			db.MsSupplements.Remove(deleted);
+			db.SaveChanges();
+
+			return true;
 		}
 	}
 }

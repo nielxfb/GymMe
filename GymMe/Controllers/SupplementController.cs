@@ -88,5 +88,15 @@ namespace GymMe.Controllers
 
 			return SupplementHandler.GetSupplementById(id);
 		}
+
+		public static Response<MsSupplement> DeleteSupplement(int supplementID)
+		{
+			if (supplementID == 0)
+			{
+				return new Response<MsSupplement>(false, "ID invalid", null);
+			}
+
+			return SupplementHandler.DeleteSupplement(supplementID);
+		}
 	}
 }
