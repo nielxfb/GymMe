@@ -76,7 +76,7 @@ namespace GymMe.Controllers
 
 		public static Response<MsUser> GetUserById(int id)
 		{
-			if (id <= 0)
+			if (id == 0)
 			{
 				return new Response<MsUser>(false, "ID invalid", null);
 			}
@@ -87,7 +87,7 @@ namespace GymMe.Controllers
 		public static Response<MsUser> UpdateUser(int id, string username, string userEmail, string userGender, DateTime userDob, string role, string userPassword, string confPassword)
 		{
 			string error = "";
-			if (id <= 0 || username == "" || userEmail == "" || userDob.Equals(DateTime.MinValue) || userGender == "" || userPassword == "" || confPassword == "")
+			if (id == 0 || username == "" || userEmail == "" || userDob.Equals(DateTime.MinValue) || userGender == "" || userPassword == "" || confPassword == "")
 			{
 				error = "All fields are required";
 			}

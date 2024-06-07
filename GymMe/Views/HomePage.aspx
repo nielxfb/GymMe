@@ -10,9 +10,9 @@
         . Role:&nbsp;
         <asp:Label ID="LblRole" runat="server" Text="" CssClass="text-decoration-underline"></asp:Label>
     </div>
-    <asp:GridView ID="GVUsers" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered">
+    <asp:GridView ID="GVUsers" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered table-striped">
         <Columns>
-            <asp:BoundField DataField="UserID" HeaderText="ID"  SortExpression="UserID" Visible="false" />
+            <asp:BoundField DataField="UserID" HeaderText="ID"  SortExpression="UserID" />
             <asp:BoundField DataField="UserName" HeaderText="Username" SortExpression="UserName" />
             <asp:BoundField DataField="UserPassword" HeaderText="Password" SortExpression="UserPassword" />
             <asp:BoundField DataField="UserEmail" HeaderText="Email" SortExpression="UserEmail" />

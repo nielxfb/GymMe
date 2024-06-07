@@ -22,7 +22,7 @@ namespace GymMe.Views
 
 			if (Session["user"] == null)
 			{
-				String cookie = Request.Cookies["user_cookie"].Value;
+				string cookie = Request.Cookies["user_cookie"].Value;
 				Response<MsUser> response = UserController.LoginUserByCookie(cookie);
 
 				if (!response.Success)

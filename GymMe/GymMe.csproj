@@ -106,13 +106,27 @@
       <LastGenOutput>DatabaseModel.cs</LastGenOutput>
     </Content>
     <Content Include="Views\HomePage.aspx" />
+    <Content Include="Views\InsertSupplement.aspx" />
     <Content Include="Views\LoginPage.aspx" />
+    <Content Include="Views\ManageSupplement.aspx" />
     <Content Include="Views\RegisterPage.aspx" />
+    <Content Include="Views\UpdateSupplement.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\SupplementController.cs" />
+    <Compile Include="Controllers\SupplementTypeController.cs" />
+    <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Factories\CartFactory.cs" />
+    <Compile Include="Factories\SupplementFactory.cs" />
+    <Compile Include="Factories\TransactionFactory.cs" />
     <Compile Include="Factories\UserFactory.cs" />
+    <Compile Include="Handlers\CartHandler.cs" />
+    <Compile Include="Handlers\SupplementHandler.cs" />
+    <Compile Include="Handlers\SupplementTypeHandler.cs" />
+    <Compile Include="Handlers\TransactionHandler.cs" />
     <Compile Include="Handlers\UserHandler.cs" />
     <Compile Include="Layouts\Navbar.Master.cs">
       <DependentUpon>Navbar.Master</DependentUpon>
@@ -156,7 +170,11 @@
     </Compile>
     <Compile Include="Modules\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CartRepository.cs" />
     <Compile Include="Repositories\DatabaseSingleton.cs" />
+    <Compile Include="Repositories\SupplementRepository.cs" />
+    <Compile Include="Repositories\SupplementTypeRepository.cs" />
+    <Compile Include="Repositories\TransactionRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Views\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
@@ -165,6 +183,13 @@
     <Compile Include="Views\HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\InsertSupplement.aspx.cs">
+      <DependentUpon>InsertSupplement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\InsertSupplement.aspx.designer.cs">
+      <DependentUpon>InsertSupplement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,12 +197,26 @@
     <Compile Include="Views\LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\ManageSupplement.aspx.cs">
+      <DependentUpon>ManageSupplement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ManageSupplement.aspx.designer.cs">
+      <DependentUpon>ManageSupplement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegisterPage.aspx.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\RegisterPage.aspx.designer.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateSupplement.aspx.cs">
+      <DependentUpon>UpdateSupplement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateSupplement.aspx.designer.cs">
+      <DependentUpon>UpdateSupplement.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

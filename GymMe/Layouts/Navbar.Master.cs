@@ -39,8 +39,6 @@ namespace GymMe.Layouts
 			MsUser user = Session["user"] as MsUser;
 			string role = user.UserRole;
 
-			Debug.WriteLine(role);
-
 			switch (role)
 			{
 				case "Admin":
@@ -90,7 +88,7 @@ namespace GymMe.Layouts
 
 		protected void LBManageSupplement_Click(object sender, EventArgs e)
 		{
-
+			Response.Redirect("~/Views/ManageSupplement.aspx");
 		}
 
 		protected void LBOrderQueue_Click(object sender, EventArgs e)
@@ -120,6 +118,11 @@ namespace GymMe.Layouts
 
 			Session.Remove("user");
 			Response.Redirect("~/Views/LoginPage.aspx");
+		}
+
+		protected void LBLogo_Click(object sender, EventArgs e)
+		{
+			Response.Redirect("~/Views/HomePage.aspx");
 		}
 	}
 }

@@ -11,9 +11,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
             <div class="container">
-                <a class="navbar-brand h1 mb-0" href="~/Views/HomePage.aspx">GymMe</a>
+                <asp:LinkButton ID="LBLogo" runat="server" CssClass="navbar-brand h1 mb-0" OnClick="LBLogo_Click">GymMe</asp:LinkButton>
                 <asp:Panel ID="CustomerPanel" runat="server" Visible="false" CssClass="collapse navbar-collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item">
