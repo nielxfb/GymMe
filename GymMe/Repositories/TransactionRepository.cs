@@ -14,6 +14,18 @@ namespace GymMe.Repositories
 			return db.TransactionHeaders.ToList();
 		}
 
+		public static List<TransactionHeader> GetAllUserHeaders(int userID)
+		{
+			LocalDatabaseEntities db = DatabaseSingleton.GetInstance();
+			return db.TransactionHeaders.Where(t => t.UserID == userID).ToList();
+		}
+
+		public static List<TransactionDetail> GetDetailById(int transactionID)
+		{
+			LocalDatabaseEntities db = DatabaseSingleton.GetInstance();
+			return db.TransactionDetails.Where(t => t.TransactionID.Equals(transactionID)).ToList();
+		}
+
 		public static TransactionHeader GetHeaderById(int id)
 		{
 			LocalDatabaseEntities db = DatabaseSingleton.GetInstance();

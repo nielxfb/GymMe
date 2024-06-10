@@ -4,6 +4,7 @@ using GymMe.Modules;
 using GymMe.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -21,6 +22,30 @@ namespace GymMe.Handlers
 			}
 
 			return new Response<List<TransactionHeader>>(true, "Transactions found", headers);
+		}
+
+		public static Response<List<TransactionHeader>> GetUserHeaders(int userID)
+		{
+			List<TransactionHeader> headers = TransactionRepository.GetAllUserHeaders(userID);
+
+			if (headers.Count == 0)
+			{
+				return new Response<List<TransactionHeader>>(false, "No transactions found", null);
+			}
+
+			return new Response<List<TransactionHeader>>(true, "Transactions found", headers);
+		}
+
+		public static Response<List<TransactionDetail>> GetDetailById(int id)
+		{
+			List<TransactionDetail> detail = TransactionRepository.GetDetailById(id);
+
+			if (detail.Count == 0)
+			{
+				return new Response<List<TransactionDetail>>(false, "Transaction not found", null);
+			}
+
+			return new Response<List<TransactionDetail>>(true, "Transaction found", detail);
 		}
 
 		public static Response<TransactionHeader> UpdateTransactionStatus(int id, string status)

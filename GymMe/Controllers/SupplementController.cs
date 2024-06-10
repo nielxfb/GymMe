@@ -18,7 +18,7 @@ namespace GymMe.Controllers
 		public static Response<MsSupplement> AddSupplement(string name, string expiry, int price, int typeID)
 		{
 			string error = "";
-			if (name == "" || expiry == "" || price == 0 || typeID == 0)
+			if (name == "" || expiry == "" || price <= 0 || typeID == 0)
 			{
 				error = "All fields are required.";
 			}
@@ -50,7 +50,7 @@ namespace GymMe.Controllers
 		public static Response<MsSupplement> UpdateSupplement(int id, string name, string expiry, int price, int typeID)
 		{
 			string error = "";
-			if (id == 0 || name == "" || expiry == "" || price == 0 || typeID == 0)
+			if (id == 0 || name == "" || expiry == "" || price <= 0 || typeID == 0)
 			{
 				error = "All fields are required";
 			}

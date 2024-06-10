@@ -7,7 +7,7 @@
         <Columns>
             <asp:BoundField DataField="SupplementID" HeaderText="ID" SortExpression="SupplementID" />
             <asp:BoundField DataField="SupplementName" HeaderText="Name" SortExpression="SupplementName" />
-            <asp:BoundField DataField="SupplementExpiryDate" HeaderText="Expiry Date" SortExpression="SupplementExpiryDate" />
+            <asp:BoundField DataField="SupplementExpiryDate" HeaderText="Expiry Date" SortExpression="SupplementExpiryDate" DataFormatString="{0:MM/dd/yyyy}" />
             <asp:BoundField DataField="SupplementPrice" HeaderText="Price" SortExpression="SupplementPrice" />
             <asp:BoundField DataField="MsSupplementType.SupplementTypeName" HeaderText="Supplement Type" SortExpression="MsSupplementType.SupplementTypeName" />
             <asp:TemplateField HeaderText="Actions">

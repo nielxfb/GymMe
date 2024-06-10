@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="LocalDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="LocalDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="MsCart">
           <Key>
             <PropertyRef Name="CartID" />
@@ -46,8 +46,9 @@
         <EntityType Name="TransactionDetail">
           <Key>
             <PropertyRef Name="TransactionID" />
+            <PropertyRef Name="SupplementID" />
           </Key>
-          <Property Name="TransactionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransactionID" Type="int" Nullable="false" />
           <Property Name="SupplementID" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
         </EntityType>
@@ -110,7 +111,7 @@
         </Association>
         <Association Name="FK_TransactionDetail_ToTransactionHeader">
           <End Role="TransactionHeader" Type="Self.TransactionHeader" Multiplicity="1" />
-          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="0..1" />
+          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TransactionHeader">
               <PropertyRef Name="TransactionID" />
@@ -164,7 +165,8 @@
             <End Role="TransactionHeader" EntitySet="TransactionHeader" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LocalDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -206,19 +208,20 @@
           </Key>
           <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="UserEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="UserDOB" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="UserGender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="MsCarts" Relationship="Self.FK_MsCart_ToMsUser" FromRole="MsUser" ToRole="MsCart" />
           <NavigationProperty Name="TransactionHeaders" Relationship="Self.FK_TransactionHeader_ToMsUser" FromRole="MsUser" ToRole="TransactionHeader" />
-          <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TransactionDetail">
           <Key>
             <PropertyRef Name="TransactionID" />
+            <PropertyRef Name="SupplementID" />
           </Key>
-          <Property Name="TransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionID" Type="Int32" Nullable="false" />
           <Property Name="SupplementID" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
           <NavigationProperty Name="MsSupplement" Relationship="Self.FK_TransactionDetail_ToMsSupplement" FromRole="TransactionDetail" ToRole="MsSupplement" />
@@ -233,7 +236,7 @@
           <Property Name="TransactionDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="MsUser" Relationship="Self.FK_TransactionHeader_ToMsUser" FromRole="TransactionHeader" ToRole="MsUser" />
-          <NavigationProperty Name="TransactionDetail" Relationship="Self.FK_TransactionDetail_ToTransactionHeader" FromRole="TransactionHeader" ToRole="TransactionDetail" />
+          <NavigationProperty Name="TransactionDetails" Relationship="Self.FK_TransactionDetail_ToTransactionHeader" FromRole="TransactionHeader" ToRole="TransactionDetail" />
         </EntityType>
         <Association Name="FK_MsCart_ToMsSupplement">
           <End Role="MsSupplement" Type="Self.MsSupplement" Multiplicity="1" />
@@ -297,7 +300,7 @@
         </Association>
         <Association Name="FK_TransactionDetail_ToTransactionHeader">
           <End Role="TransactionHeader" Type="Self.TransactionHeader" Multiplicity="1" />
-          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="0..1" />
+          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TransactionHeader">
               <PropertyRef Name="TransactionID" />
@@ -377,9 +380,9 @@
           <EntitySetMapping Name="MsUsers">
             <EntityTypeMapping TypeName="LocalDatabaseModel.MsUser">
               <MappingFragment StoreEntitySet="MsUser">
-                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
                 <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
                 <ScalarProperty Name="UserDOB" ColumnName="UserDOB" />
                 <ScalarProperty Name="UserGender" ColumnName="UserGender" />

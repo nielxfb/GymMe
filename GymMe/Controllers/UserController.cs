@@ -28,14 +28,15 @@ namespace GymMe.Controllers
 
 		private static bool IsAlphanumeric(string password)
 		{
+			bool containsAlpha = false;
+			bool containsNumber = false;
 			foreach (char c in password)
 			{
-				if (!char.IsLetterOrDigit(c))
-				{
-					return false;
-				}
+				if (char.IsLetter(c)) containsAlpha = true;
+				else if (char.IsDigit(c)) containsNumber = true;
+				else return false;
 			}
-			return true;
+			return (containsAlpha && containsNumber);
 		}
 
 		public static Response<MsUser> RegisterUser(string username, string userEmail, string userDob, string userGender, string userPassword, string confPassword)

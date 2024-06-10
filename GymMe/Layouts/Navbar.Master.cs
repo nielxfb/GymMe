@@ -54,12 +54,12 @@ namespace GymMe.Layouts
 		}
 		protected void LBOrderSupplement_Click(object sender, EventArgs e)
 		{
-
+			Response.Redirect("~/Views/OrderSupplement.aspx");
 		}
 
 		protected void LBHistory_Click(object sender, EventArgs e)
 		{
-
+			Response.Redirect("~/Views/HistoryPage.aspx");
 		}
 
 		protected void LBProfile_Click(object sender, EventArgs e)
@@ -124,5 +124,15 @@ namespace GymMe.Layouts
 		{
 			Response.Redirect("~/Views/HomePage.aspx");
 		}
-	}
+
+		protected void LBCartPage_Click(object sender, EventArgs e)
+		{
+			Response.Redirect("~/Views/CartPage.aspx");
+		}
+
+        protected void LBHistory1_Click(object sender, EventArgs e)
+        {
+			Response.Redirect("~/Views/HistoryPage.aspx");
+        }
+    }
 }

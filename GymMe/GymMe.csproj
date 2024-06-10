@@ -97,19 +97,23 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Models\DatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DatabaseModel.Context.cs</LastGenOutput>
       <DependentUpon>DatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>DatabaseModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\DatabaseModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DatabaseModel.edmx</DependentUpon>
       <LastGenOutput>DatabaseModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\CartPage.aspx" />
+    <Content Include="Views\HistoryDetail.aspx" />
+    <Content Include="Views\HistoryPage.aspx" />
     <Content Include="Views\HomePage.aspx" />
     <Content Include="Views\InsertSupplement.aspx" />
     <Content Include="Views\LoginPage.aspx" />
     <Content Include="Views\ManageSupplement.aspx" />
     <Content Include="Views\OrderQueuePage.aspx" />
+    <Content Include="Views\OrderSupplement.aspx" />
     <Content Include="Views\ProfilePage.aspx" />
     <Content Include="Views\RegisterPage.aspx" />
     <Content Include="Views\UpdateSupplement.aspx" />
@@ -121,6 +125,14 @@
     <Compile Include="Controllers\SupplementTypeController.cs" />
     <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Datasets\TransactionDataset.cs">
+      <DependentUpon>TransactionDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\TransactionDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Factories\CartFactory.cs" />
     <Compile Include="Factories\SupplementFactory.cs" />
     <Compile Include="Factories\TransactionFactory.cs" />
@@ -178,6 +190,27 @@
     <Compile Include="Repositories\SupplementTypeRepository.cs" />
     <Compile Include="Repositories\TransactionRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Views\CartPage.aspx.cs">
+      <DependentUpon>CartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CartPage.aspx.designer.cs">
+      <DependentUpon>CartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HistoryDetail.aspx.cs">
+      <DependentUpon>HistoryDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\HistoryDetail.aspx.designer.cs">
+      <DependentUpon>HistoryDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HistoryPage.aspx.cs">
+      <DependentUpon>HistoryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\HistoryPage.aspx.designer.cs">
+      <DependentUpon>HistoryPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -213,6 +246,13 @@
     <Compile Include="Views\OrderQueuePage.aspx.designer.cs">
       <DependentUpon>OrderQueuePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\OrderSupplement.aspx.cs">
+      <DependentUpon>OrderSupplement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\OrderSupplement.aspx.designer.cs">
+      <DependentUpon>OrderSupplement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\ProfilePage.aspx.cs">
       <DependentUpon>ProfilePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,13 +276,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\DatabaseModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DatabaseModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DatabaseModel.edmx.diagram">
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
@@ -260,6 +293,24 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Layouts\Navbar.Master" />
+    <EntityDeploy Include="Models\DatabaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DatabaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DatabaseModel.edmx.diagram">
+      <DependentUpon>DatabaseModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Datasets\TransactionDataset.xsc">
+      <DependentUpon>TransactionDataset.xsd</DependentUpon>
+    </Content>
+    <None Include="Datasets\TransactionDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionDataset.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Datasets\TransactionDataset.xss">
+      <DependentUpon>TransactionDataset.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -271,7 +322,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

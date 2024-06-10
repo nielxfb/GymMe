@@ -6,7 +6,7 @@
     <asp:GridView ID="GVOrders" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered table-striped" OnRowCommand="GVOrders_RowCommand">
         <Columns>
             <asp:BoundField DataField="TransactionID" HeaderText="ID" SortExpression="TransactionID" />
-            <asp:BoundField DataField="TransactionDate" HeaderText="Date" SortExpression="TransactionDate" />
+            <asp:BoundField DataField="TransactionDate" HeaderText="Date" SortExpression="TransactionDate" DataFormatString="{0:MM/dd/yyyy}" />
             <asp:BoundField DataField="MsUser.UserName" HeaderText="User" SortExpression="MsUser.UserName" />
             <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
             <asp:TemplateField HeaderText="Action">

@@ -78,6 +78,15 @@ namespace GymMe.Layouts
 		protected global::System.Web.UI.WebControls.LinkButton LBProfile;
 
 		/// <summary>
+		/// LBCartPage control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.LinkButton LBCartPage;
+
+		/// <summary>
 		/// LBLogOut control.
 		/// </summary>
 		/// <remarks>
@@ -121,6 +130,15 @@ namespace GymMe.Layouts
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.LinkButton LBOrderQueue;
+
+		/// <summary>
+		/// LBHistory1 control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.LinkButton LBHistory1;
 
 		/// <summary>
 		/// LBProfile1 control.

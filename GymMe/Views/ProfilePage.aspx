@@ -26,7 +26,7 @@
                 <asp:TextBox ID="TxtDOB" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
             </div>
             <asp:Label ID="LblError" runat="server" Text=""></asp:Label>
-            <asp:Button ID="BtnProfile" runat="server" Text="Update" CssClass="btn btn-primary" OnClick="BtnProfile_Click" />
+            <asp:Button ID="BtnProfile" runat="server" Text="Update" CssClass="btn btn-primary" OnClick="BtnProfile_Click" UseSubmitBehavior="false" />
         </div>
         <div class="d-flex flex-column justify-content-center align-items-start w-75 h-100 p-5 border rounded-4 gap-2">
             <h2>Update Password</h2>
@@ -39,7 +39,7 @@
                 <asp:TextBox ID="TxtNewPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
             </div>
             <asp:Label ID="LblPasswordError" runat="server" Text=""></asp:Label>
-            <asp:Button ID="BtnPassword" runat="server" Text="Update" CssClass="btn btn-primary" OnClick="BtnPassword_Click" />
+            <asp:Button ID="BtnPassword" runat="server" Text="Update" CssClass="btn btn-primary" OnClick="BtnPassword_Click" UseSubmitBehavior="false" />
         </div>
     </div>
 </asp:Content>

@@ -20,5 +20,24 @@ namespace GymMe.Repositories
 			LocalDatabaseEntities db = DatabaseSingleton.GetInstance();
 			return db.MsCarts.Where(c => c.UserID == userID).ToList();
 		}
+
+		public static bool DeleteCart(int userID)
+		{
+			LocalDatabaseEntities db = DatabaseSingleton.GetInstance();
+			List<MsCart> carts = GetAllCarts(userID);
+
+			if (carts.Count == 0)
+			{
+				return false;
+			}
+
+			foreach (MsCart cart in carts)
+			{
+				db.MsCarts.Remove(cart);
+			}
+
+			db.SaveChanges();
+			return true;
+		}
 	}
 }

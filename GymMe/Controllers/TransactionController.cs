@@ -15,6 +15,26 @@ namespace GymMe.Controllers
 			return TransactionHandler.GetAllHeaders();
 		}
 
+		public static Response<List<TransactionHeader>> GetUserHeaders(int userID)
+		{
+			if (userID == 0)
+			{
+				return new Response<List<TransactionHeader>>(false, "User ID is required", null);
+			}
+
+			return TransactionHandler.GetUserHeaders(userID);
+		}
+
+		public static Response<List<TransactionDetail>> GetDetailById(int transactionID)
+		{
+			if (transactionID == 0)
+			{
+				return new Response<List<TransactionDetail>>(false, "Transaction ID is required", null);
+			}
+
+			return TransactionHandler.GetDetailById(transactionID);
+		}
+
 		public static Response<TransactionHeader> UpdateTransactionStatus(int id, string status)
 		{
 			string error = "";
@@ -61,7 +81,7 @@ namespace GymMe.Controllers
 
 		public static Response<TransactionDetail> AddDetail(int transactionID, int supplementID, int quantity)
 		{
-			if (transactionID == 0 || supplementID == 0 || quantity == 0)
+			if (transactionID == 0 || supplementID == 0 || quantity <= 0)
 			{
 				return new Response<TransactionDetail>(false, "All fields are required", null);
 			}

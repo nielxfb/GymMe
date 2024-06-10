@@ -13,6 +13,18 @@ namespace GymMe.Handlers
 {
 	public class CartHandler
 	{
+		public static Response<List<MsCart>> GetAllCarts(int userID)
+		{
+			List<MsCart> carts = CartRepository.GetAllCarts(userID);
+
+			if (carts.Count == 0)
+			{
+				return new Response<List<MsCart>>(false, "No carts found", null);
+			}
+
+			return new Response<List<MsCart>>(true, "Successfully retrieved carts", carts);
+		}
+
 		public static Response<MsCart> AddToCart(int userID, int supplementID, int quantity)
 		{
 			MsCart cart = CartFactory.CreateCart(userID, supplementID, quantity);
@@ -20,20 +32,20 @@ namespace GymMe.Handlers
 			return new Response<MsCart>(true, "Successfully added to cart", cart);
 		}
 
-		public static Response<Boolean> CheckoutCart(int userID)
+		public static Response<MsCart> CheckoutCart(int userID)
 		{
 			List<MsCart> carts = CartRepository.GetAllCarts(userID);
 
 			if (carts.Count == 0)
 			{
-				return new Response<Boolean>(false, "No carts found", false);
+				return new Response<MsCart>(false, "No carts found", null);
 			}
 
 			Response<TransactionHeader> responseHeader = TransactionController.AddHeader(userID, DateTime.Now, "Unhandled");
 
 			if (!responseHeader.Success)
 			{
-				return new Response<Boolean>(false, responseHeader.Message, false);
+				return new Response<MsCart>(false, responseHeader.Message, null);
 			}
 
 			foreach (MsCart cart in carts)
@@ -42,11 +54,30 @@ namespace GymMe.Handlers
 
 				if (!responseDetail.Success)
 				{
-					return new Response<Boolean>(false, responseDetail.Message, false);
+					return new Response<MsCart>(false, responseDetail.Message, null);
 				}
 			}
 
-			return new Response<Boolean>(true, "Successfully checkout cart!", true);
+			bool deleted = CartRepository.DeleteCart(userID);
+
+			if (!deleted)
+			{
+				return new Response<MsCart>(false, "Failed to clear cart", null);
+			}
+
+			return new Response<MsCart>(true, "Successfully checkout cart!", null);
+		}
+
+		public static Response<MsCart> ClearCart(int userID)
+		{
+			bool isDeleted = CartRepository.DeleteCart(userID);
+
+			if (isDeleted)
+			{
+				return new Response<MsCart>(true, "Successfully cleared cart", null);
+			}
+
+			return new Response<MsCart>(false, "No carts found", null);
 		}
 	}
 }
