@@ -103,7 +103,7 @@ namespace GymMe.Layouts
 
 		protected void LBTReport_Click(object sender, EventArgs e)
 		{
-
+			Response.Redirect("~/Views/ReportPage.aspx");
 		}
 
 		protected void LBLogOut1_Click(object sender, EventArgs e)

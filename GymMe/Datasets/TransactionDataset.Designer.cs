@@ -32,11 +32,15 @@ namespace GymMe.Datasets {
         
         private MsSupplementDataTable tableMsSupplement;
         
+        private MsSupplementTypeDataTable tableMsSupplementType;
+        
         private global::System.Data.DataRelation relationTransactionHeader_TransactionDetail;
         
         private global::System.Data.DataRelation relationMsUser_TransactionHeader;
         
         private global::System.Data.DataRelation relationMsSupplement_TransactionDetail;
+        
+        private global::System.Data.DataRelation relationMsSupplementType_MsSupplement;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -77,6 +81,9 @@ namespace GymMe.Datasets {
                 }
                 if ((ds.Tables["MsSupplement"] != null)) {
                     base.Tables.Add(new MsSupplementDataTable(ds.Tables["MsSupplement"]));
+                }
+                if ((ds.Tables["MsSupplementType"] != null)) {
+                    base.Tables.Add(new MsSupplementTypeDataTable(ds.Tables["MsSupplementType"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -133,6 +140,16 @@ namespace GymMe.Datasets {
         public MsSupplementDataTable MsSupplement {
             get {
                 return this.tableMsSupplement;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public MsSupplementTypeDataTable MsSupplementType {
+            get {
+                return this.tableMsSupplementType;
             }
         }
         
@@ -215,6 +232,9 @@ namespace GymMe.Datasets {
                 if ((ds.Tables["MsSupplement"] != null)) {
                     base.Tables.Add(new MsSupplementDataTable(ds.Tables["MsSupplement"]));
                 }
+                if ((ds.Tables["MsSupplementType"] != null)) {
+                    base.Tables.Add(new MsSupplementTypeDataTable(ds.Tables["MsSupplementType"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -272,9 +292,16 @@ namespace GymMe.Datasets {
                     this.tableMsSupplement.InitVars();
                 }
             }
+            this.tableMsSupplementType = ((MsSupplementTypeDataTable)(base.Tables["MsSupplementType"]));
+            if ((initTable == true)) {
+                if ((this.tableMsSupplementType != null)) {
+                    this.tableMsSupplementType.InitVars();
+                }
+            }
             this.relationTransactionHeader_TransactionDetail = this.Relations["TransactionHeader_TransactionDetail"];
             this.relationMsUser_TransactionHeader = this.Relations["MsUser_TransactionHeader"];
             this.relationMsSupplement_TransactionDetail = this.Relations["MsSupplement_TransactionDetail"];
+            this.relationMsSupplementType_MsSupplement = this.Relations["MsSupplementType_MsSupplement"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -293,6 +320,8 @@ namespace GymMe.Datasets {
             base.Tables.Add(this.tableMsUser);
             this.tableMsSupplement = new MsSupplementDataTable();
             base.Tables.Add(this.tableMsSupplement);
+            this.tableMsSupplementType = new MsSupplementTypeDataTable();
+            base.Tables.Add(this.tableMsSupplementType);
             this.relationTransactionHeader_TransactionDetail = new global::System.Data.DataRelation("TransactionHeader_TransactionDetail", new global::System.Data.DataColumn[] {
                         this.tableTransactionHeader.TransactionIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTransactionDetail.TransactionIDColumn}, false);
@@ -305,6 +334,10 @@ namespace GymMe.Datasets {
                         this.tableMsSupplement.SupplementIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTransactionDetail.SupplementIDColumn}, false);
             this.Relations.Add(this.relationMsSupplement_TransactionDetail);
+            this.relationMsSupplementType_MsSupplement = new global::System.Data.DataRelation("MsSupplementType_MsSupplement", new global::System.Data.DataColumn[] {
+                        this.tableMsSupplementType.SupplementTypeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableMsSupplement.SupplementTypeIDColumn}, false);
+            this.Relations.Add(this.relationMsSupplementType_MsSupplement);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -328,6 +361,12 @@ namespace GymMe.Datasets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeMsSupplement() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeMsSupplementType() {
             return false;
         }
         
@@ -397,6 +436,9 @@ namespace GymMe.Datasets {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void MsSupplementRowChangeEventHandler(object sender, MsSupplementRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void MsSupplementTypeRowChangeEventHandler(object sender, MsSupplementTypeRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1247,6 +1289,8 @@ namespace GymMe.Datasets {
             
             private global::System.Data.DataColumn columnSupplementExpiryDate;
             
+            private global::System.Data.DataColumn columnSupplementTypeID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MsSupplementDataTable() {
@@ -1314,6 +1358,14 @@ namespace GymMe.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SupplementTypeIDColumn {
+                get {
+                    return this.columnSupplementTypeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1349,13 +1401,17 @@ namespace GymMe.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MsSupplementRow AddMsSupplementRow(string SupplementID, string SupplementName, string SupplementPrice, string SupplementExpiryDate) {
+            public MsSupplementRow AddMsSupplementRow(string SupplementID, string SupplementName, string SupplementPrice, string SupplementExpiryDate, MsSupplementTypeRow parentMsSupplementTypeRowByMsSupplementType_MsSupplement) {
                 MsSupplementRow rowMsSupplementRow = ((MsSupplementRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         SupplementID,
                         SupplementName,
                         SupplementPrice,
-                        SupplementExpiryDate};
+                        SupplementExpiryDate,
+                        null};
+                if ((parentMsSupplementTypeRowByMsSupplementType_MsSupplement != null)) {
+                    columnValuesArray[4] = parentMsSupplementTypeRowByMsSupplementType_MsSupplement[0];
+                }
                 rowMsSupplementRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMsSupplementRow);
                 return rowMsSupplementRow;
@@ -1382,6 +1438,7 @@ namespace GymMe.Datasets {
                 this.columnSupplementName = base.Columns["SupplementName"];
                 this.columnSupplementPrice = base.Columns["SupplementPrice"];
                 this.columnSupplementExpiryDate = base.Columns["SupplementExpiryDate"];
+                this.columnSupplementTypeID = base.Columns["SupplementTypeID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1395,6 +1452,8 @@ namespace GymMe.Datasets {
                 base.Columns.Add(this.columnSupplementPrice);
                 this.columnSupplementExpiryDate = new global::System.Data.DataColumn("SupplementExpiryDate", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSupplementExpiryDate);
+                this.columnSupplementTypeID = new global::System.Data.DataColumn("SupplementTypeID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSupplementTypeID);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1481,6 +1540,267 @@ namespace GymMe.Datasets {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "MsSupplementDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class MsSupplementTypeDataTable : global::System.Data.TypedTableBase<MsSupplementTypeRow> {
+            
+            private global::System.Data.DataColumn columnSupplementTypeID;
+            
+            private global::System.Data.DataColumn columnSupplementTypeName;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MsSupplementTypeDataTable() {
+                this.TableName = "MsSupplementType";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal MsSupplementTypeDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected MsSupplementTypeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SupplementTypeIDColumn {
+                get {
+                    return this.columnSupplementTypeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SupplementTypeNameColumn {
+                get {
+                    return this.columnSupplementTypeName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MsSupplementTypeRow this[int index] {
+                get {
+                    return ((MsSupplementTypeRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MsSupplementTypeRowChangeEventHandler MsSupplementTypeRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MsSupplementTypeRowChangeEventHandler MsSupplementTypeRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MsSupplementTypeRowChangeEventHandler MsSupplementTypeRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MsSupplementTypeRowChangeEventHandler MsSupplementTypeRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddMsSupplementTypeRow(MsSupplementTypeRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MsSupplementTypeRow AddMsSupplementTypeRow(string SupplementTypeID, string SupplementTypeName) {
+                MsSupplementTypeRow rowMsSupplementTypeRow = ((MsSupplementTypeRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        SupplementTypeID,
+                        SupplementTypeName};
+                rowMsSupplementTypeRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMsSupplementTypeRow);
+                return rowMsSupplementTypeRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                MsSupplementTypeDataTable cln = ((MsSupplementTypeDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MsSupplementTypeDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnSupplementTypeID = base.Columns["SupplementTypeID"];
+                this.columnSupplementTypeName = base.Columns["SupplementTypeName"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnSupplementTypeID = new global::System.Data.DataColumn("SupplementTypeID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSupplementTypeID);
+                this.columnSupplementTypeName = new global::System.Data.DataColumn("SupplementTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSupplementTypeName);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MsSupplementTypeRow NewMsSupplementTypeRow() {
+                return ((MsSupplementTypeRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MsSupplementTypeRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(MsSupplementTypeRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MsSupplementTypeRowChanged != null)) {
+                    this.MsSupplementTypeRowChanged(this, new MsSupplementTypeRowChangeEvent(((MsSupplementTypeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MsSupplementTypeRowChanging != null)) {
+                    this.MsSupplementTypeRowChanging(this, new MsSupplementTypeRowChangeEvent(((MsSupplementTypeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MsSupplementTypeRowDeleted != null)) {
+                    this.MsSupplementTypeRowDeleted(this, new MsSupplementTypeRowChangeEvent(((MsSupplementTypeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MsSupplementTypeRowDeleting != null)) {
+                    this.MsSupplementTypeRowDeleting(this, new MsSupplementTypeRowChangeEvent(((MsSupplementTypeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveMsSupplementTypeRow(MsSupplementTypeRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TransactionDataset ds = new TransactionDataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MsSupplementTypeDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1953,6 +2273,33 @@ namespace GymMe.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SupplementTypeID {
+                get {
+                    try {
+                        return ((string)(this[this.tableMsSupplement.SupplementTypeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SupplementTypeID\' in table \'MsSupplement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMsSupplement.SupplementTypeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MsSupplementTypeRow MsSupplementTypeRow {
+                get {
+                    return ((MsSupplementTypeRow)(this.GetParentRow(this.Table.ParentRelations["MsSupplementType_MsSupplement"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["MsSupplementType_MsSupplement"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsSupplementIDNull() {
                 return this.IsNull(this.tableMsSupplement.SupplementIDColumn);
             }
@@ -2001,12 +2348,106 @@ namespace GymMe.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSupplementTypeIDNull() {
+                return this.IsNull(this.tableMsSupplement.SupplementTypeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSupplementTypeIDNull() {
+                this[this.tableMsSupplement.SupplementTypeIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TransactionDetailRow[] GetTransactionDetailRows() {
                 if ((this.Table.ChildRelations["MsSupplement_TransactionDetail"] == null)) {
                     return new TransactionDetailRow[0];
                 }
                 else {
                     return ((TransactionDetailRow[])(base.GetChildRows(this.Table.ChildRelations["MsSupplement_TransactionDetail"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class MsSupplementTypeRow : global::System.Data.DataRow {
+            
+            private MsSupplementTypeDataTable tableMsSupplementType;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal MsSupplementTypeRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMsSupplementType = ((MsSupplementTypeDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SupplementTypeID {
+                get {
+                    try {
+                        return ((string)(this[this.tableMsSupplementType.SupplementTypeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SupplementTypeID\' in table \'MsSupplementType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMsSupplementType.SupplementTypeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SupplementTypeName {
+                get {
+                    try {
+                        return ((string)(this[this.tableMsSupplementType.SupplementTypeNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SupplementTypeName\' in table \'MsSupplementType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMsSupplementType.SupplementTypeNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSupplementTypeIDNull() {
+                return this.IsNull(this.tableMsSupplementType.SupplementTypeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSupplementTypeIDNull() {
+                this[this.tableMsSupplementType.SupplementTypeIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSupplementTypeNameNull() {
+                return this.IsNull(this.tableMsSupplementType.SupplementTypeNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSupplementTypeNameNull() {
+                this[this.tableMsSupplementType.SupplementTypeNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MsSupplementRow[] GetMsSupplementRows() {
+                if ((this.Table.ChildRelations["MsSupplementType_MsSupplement"] == null)) {
+                    return new MsSupplementRow[0];
+                }
+                else {
+                    return ((MsSupplementRow[])(base.GetChildRows(this.Table.ChildRelations["MsSupplementType_MsSupplement"])));
                 }
             }
         }
@@ -2133,6 +2574,40 @@ namespace GymMe.Datasets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MsSupplementRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class MsSupplementTypeRowChangeEvent : global::System.EventArgs {
+            
+            private MsSupplementTypeRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MsSupplementTypeRowChangeEvent(MsSupplementTypeRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MsSupplementTypeRow Row {
                 get {
                     return this.eventRow;
                 }
