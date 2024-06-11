@@ -101,6 +101,7 @@ namespace GymMe.Views
 				supplementRow["SupplementName"] = supplement.SupplementName;
 				supplementRow["SupplementPrice"] = supplement.SupplementPrice;
 				supplementRow["SupplementExpiryDate"] = supplement.SupplementExpiryDate;
+				supplementRow["SupplementTypeID"] = supplement.SupplementTypeID;
 				supplementsTable.Rows.Add(supplementRow);
 			}
 
@@ -127,7 +128,8 @@ namespace GymMe.Views
 				headerRow["UserID"] = header.UserID;
 				headerRow["TransactionDate"] = header.TransactionDate;
 				headerRow["Status"] = header.Status;
-				headerTable.Rows.Add(headerRow);
+
+				decimal subtotal = 0;
 
 				foreach (TransactionDetail detail in header.TransactionDetails)
 				{
@@ -136,7 +138,11 @@ namespace GymMe.Views
 					detailRow["SupplementID"] = detail.SupplementID;
 					detailRow["Quantity"] = detail.Quantity;
 					detailTable.Rows.Add(detailRow);
+					subtotal += (detail.Quantity * detail.MsSupplement.SupplementPrice);
 				}
+
+				headerRow["Subtotal"] = subtotal;
+				headerTable.Rows.Add(headerRow);
 			}
 
 			return transactionDataset;

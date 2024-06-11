@@ -455,6 +455,8 @@ namespace GymMe.Datasets {
             
             private global::System.Data.DataColumn columnTransactionID;
             
+            private global::System.Data.DataColumn columnSubtotal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TransactionHeaderDataTable() {
@@ -522,6 +524,14 @@ namespace GymMe.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SubtotalColumn {
+                get {
+                    return this.columnSubtotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -557,13 +567,14 @@ namespace GymMe.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TransactionHeaderRow AddTransactionHeaderRow(MsUserRow parentMsUserRowByMsUser_TransactionHeader, string TransactionDate, string Status, string TransactionID) {
+            public TransactionHeaderRow AddTransactionHeaderRow(MsUserRow parentMsUserRowByMsUser_TransactionHeader, string TransactionDate, string Status, string TransactionID, decimal Subtotal) {
                 TransactionHeaderRow rowTransactionHeaderRow = ((TransactionHeaderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TransactionDate,
                         Status,
-                        TransactionID};
+                        TransactionID,
+                        Subtotal};
                 if ((parentMsUserRowByMsUser_TransactionHeader != null)) {
                     columnValuesArray[0] = parentMsUserRowByMsUser_TransactionHeader[0];
                 }
@@ -593,6 +604,7 @@ namespace GymMe.Datasets {
                 this.columnTransactionDate = base.Columns["TransactionDate"];
                 this.columnStatus = base.Columns["Status"];
                 this.columnTransactionID = base.Columns["TransactionID"];
+                this.columnSubtotal = base.Columns["Subtotal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -606,6 +618,8 @@ namespace GymMe.Datasets {
                 base.Columns.Add(this.columnStatus);
                 this.columnTransactionID = new global::System.Data.DataColumn("TransactionID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTransactionID);
+                this.columnSubtotal = new global::System.Data.DataColumn("Subtotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubtotal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1921,6 +1935,22 @@ namespace GymMe.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Subtotal {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTransactionHeader.SubtotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Subtotal\' in table \'TransactionHeader\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransactionHeader.SubtotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MsUserRow MsUserRow {
                 get {
                     return ((MsUserRow)(this.GetParentRow(this.Table.ParentRelations["MsUser_TransactionHeader"])));
@@ -1976,6 +2006,18 @@ namespace GymMe.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTransactionIDNull() {
                 this[this.tableTransactionHeader.TransactionIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSubtotalNull() {
+                return this.IsNull(this.tableTransactionHeader.SubtotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSubtotalNull() {
+                this[this.tableTransactionHeader.SubtotalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

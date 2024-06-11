@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\reportpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\reportpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\views\\managesupplement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\managesupplement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\reports\\transactionreport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
       "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\reports\\transactionreport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\datasets\\transactiondataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\datasets\\transactiondataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|c:\\users\\adaml\\onedrive\\documents\\github\\gymme\\gymme\\views\\reportpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\reportpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\views\\reportpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\views\\reportpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\gymme\\layouts\\navbar.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F9F4383-B944-4A05-8BFE-236841D5692D}|GymMe\\GymMe.csproj|solutionrelative:gymme\\layouts\\navbar.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,57 +43,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TransactionReport.rpt",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Reports\\TransactionReport.rpt",
-              "RelativeDocumentMoniker": "GymMe\\Reports\\TransactionReport.rpt",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Reports\\TransactionReport.rpt",
-              "RelativeToolTip": "GymMe\\Reports\\TransactionReport.rpt",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIdSURBVDhPpZJNaBNBFMf/M7ub2NhajSDiwS96CbY2BykojaD0oF5s0YPgQYReLHgpeNCLYv0AexNRb1VUAkJcPXgQEUG89BIaxI9gqzGxH6QmXTef3Wx2nJkmNev25g8ebx7z3n/ezBv8F4wx0lhK7j6fYo3lmowMhl35HoRA3XGk/YvYW\u002BsA2vCrUEIwu1hEJltwmeDc8V5Plx4BAaXEY4J7LxLSt4q4BBS6Eiq8oGm3nXHZ1VCkS9pgfxc62/0yT\u002BASaNRLIWE6ieHB3H1EZsMyVhUKTXU37Yo0RZFeVQiuL14D1tnooBtQcEwcSO9d7aoVdefw5yFC2GG\u002BDsa/OTj228LYwmXejYrkzxkUsqZMNG0TfZkexA99lHETUqlYJ0rV5YEPqfKOG7Glo3MGRSTkx2T4JNp2\u002BzGfmMf3JzNAHijHarJIfz\u002BN0wMh2QoduRrVL9x6NqrWzUt3hjfjYMiHV1NVWNHHCJAOoMof3OBOt10T8XD24kOiv0uynFFkp8ZTrPv8NNs3\u002BpXtifawUmWZWbU6q9l16Z\u002B\u002BTXrHOHHzDPP7ND6iNvSHAtjYrkLTNDzqfQleBIU/rDhdeI1Po4l7JpyqDSTSDoKdPmwLqqhaNdh2vbHrxXWhidcZ9mXBj3yJYr3Pwf7tBnL5HLZu2YRA4O/nERzp2yVrXQJiIhWrdsUwy92/lorZyURqLP4p/YZv/eBXLK9ktQL8AbhJ7xVosbKmAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-06-10T17:54:40.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Navbar.Master.cs",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Layouts\\Navbar.Master.cs",
-              "RelativeDocumentMoniker": "GymMe\\Layouts\\Navbar.Master.cs",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Layouts\\Navbar.Master.cs",
-              "RelativeToolTip": "GymMe\\Layouts\\Navbar.Master.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAuwGkAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T17:20:48.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManageSupplement.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ManageSupplement.aspx.cs",
-              "RelativeDocumentMoniker": "GymMe\\Views\\ManageSupplement.aspx.cs",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ManageSupplement.aspx.cs",
-              "RelativeToolTip": "GymMe\\Views\\ManageSupplement.aspx.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwCsAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T17:08:06.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ReportPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ReportPage.aspx.cs",
-              "RelativeDocumentMoniker": "GymMe\\Views\\ReportPage.aspx.cs",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ReportPage.aspx.cs",
-              "RelativeToolTip": "GymMe\\Views\\ReportPage.aspx.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowDYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T17:07:57.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "ReportPage.aspx",
               "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ReportPage.aspx",
               "RelativeDocumentMoniker": "GymMe\\Views\\ReportPage.aspx",
@@ -118,14 +55,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TransactionDataset.xsd",
-              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Datasets\\TransactionDataset.xsd",
-              "RelativeDocumentMoniker": "GymMe\\Datasets\\TransactionDataset.xsd",
-              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Datasets\\TransactionDataset.xsd",
-              "RelativeToolTip": "GymMe\\Datasets\\TransactionDataset.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2024-06-10T16:14:52.778Z",
+              "DocumentIndex": 1,
+              "Title": "ReportPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ReportPage.aspx.cs",
+              "RelativeDocumentMoniker": "GymMe\\Views\\ReportPage.aspx.cs",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Views\\ReportPage.aspx.cs",
+              "RelativeToolTip": "GymMe\\Views\\ReportPage.aspx.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAgwIIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T17:07:57.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransactionReport.rpt",
+              "DocumentMoniker": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Reports\\TransactionReport.rpt",
+              "RelativeDocumentMoniker": "GymMe\\Reports\\TransactionReport.rpt",
+              "ToolTip": "C:\\Users\\adaml\\OneDrive\\Documents\\GitHub\\GymMe\\GymMe\\Reports\\TransactionReport.rpt",
+              "RelativeToolTip": "GymMe\\Reports\\TransactionReport.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPdSURBVDhPrZRbaBxVGMf/c9nd2Vuyu9nN5m7aStI2oWtSCBgtWgj10oe2D2Le1FRRBBEk\u002BCJo8amIIL5U0BfFF6mFalOs0CdrWqhJNkmTUEyyzaXuJpvsdXZ2dnauntmdbJvEvvkb/pxvZr7vP\u002Bec\u002BTj4XzEMg7LCCj39z7/y6vC7n1m3T2RtaWHi8ncXP7Bud8FaYwVPnS94pPeZgcihIBiGBkWuvfyzXcC0P9SsKrJ08\u002Br3XxbymaT1qgJjjRXaOrsiz518\u002BdyJSCv8Xid8HgcCXo7Ej1QQZciGrf7EswN9W\u002BlMLpva3hCLfNayAG2NNcw50RSFYklBtiAhs0diWYXXZcfxo23O4fMfXewbHHrNWx8IV6v/w7AGcSa\u002B\u002B0VebeVEXBuPgSezPT383qdDZ98YrRY9YYYmDKlm6KpkWsLvxhg2qTjaw14M9rRg4EgTBntbcKCtwel2OzmrbLchRUxoYmBe5kjTNAS6gHvGLK4LV/FD/lssUBMIB9xosuThbOSjj2z2GJr7txNTyGgpLGl/Y5G6j/viPH4VruAX4WfMKzOVD5qzN/Meh2ZcjRxRHZGPste7dIOGphuQjCKiUhTjpXFojAyH7oCmabjJ38Cl9FfIKCkYlLbPkG0\u002Bc/lFQI\u002BQOEg1cpGlDYP8TQVjxetYLi9DhYZcKYdCloeqqSQViKYn8f7GCL4\u002BdolsjrPqZMF\u002B8\u002BExV1lRfGleaY5tlP0zqzIu/JQC6\u002BtCOryCXDgKw6OD1hhIs2WU4xI6mjsx\u002BvrHaORCyFCCZVWFVgtri7qw/mebt3Br4BC73NPBIZGWEVsM4uFsL9KrByGyAkkkWxFX0cf24/zRt/FC6CQ8Ns\u002B\u002BJTM5tX47OrOwSp6vdbb6Q4c73Kc4O4tYUkN6MwRKDsLuT0HMJ/CU1I43B0bw1tBIxcjUZlpAdGpqYvavWzcqhrH524jN39FFxVZk65qebm1uOHeqP4BkXsc2r0NM\u002BWE8OAy7L4rPX/oEZyJnwZI22WmvZKaE6ejkxPTdqmGtbebu/oa529dgt7FwO\u002B3obnGgI2iDi2PgdzRg9MAFdLl6YZBcilSZKzXbj5whtVYzqRlKRR6lYp4kUzBbJ1cCNFJZ72Hhd9sRtIXB6nboul5b7uPaoWZoompAtghMLEuIZwxyhDFoD9LoDqvI8SISKQFxcnytb/E1lWS1cpjssOs8pGiGVw37yty61Ej\u002BC9cZouBlVTHoKKTWE7liOsvL0EpaucSbK6\u002BR2kqsWeFuw5YAN336eOCLsqK\u002BIxSl7rwgI54UZhaWtn9cXElOKqr28N6dMX7qjyuKVbIH4F/CwpxOdjf1iQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-06-10T17:54:40.122Z",
               "EditorCaption": ""
             }
           ]
