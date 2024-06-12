@@ -54,12 +54,6 @@ Before you begin, ensure you have the following installed:
      Update-Package -reinstall
      ```
 
-4. **Update the database:**
-   - Open `Package Manager Console` and run:
-     ```bash
-     Update-Database
-     ```
-
 ## Running the Application
 
 1. **Build the solution:**
@@ -76,11 +70,14 @@ Before you begin, ensure you have the following installed:
 ```
 GymMe/
 ├── Controllers/        # Controllers for handling requests
+├── Dataset/            # Datasets for Reporting
 ├── Factories/          # Factories for instantiating objects (.cs)
 ├── Handlers/           # Handlers for business logic validation
+├── Layouts/            # Master pages (.master)
 ├── Models/             # Data models and Entity Framework context
 ├── Modules/            # Utility classes used for modules
 ├── Properties/         # Assembly information and settings
+├── Reports/            # Reporting using SAP Crystal Report
 ├── Repositories/       # Repositories for DDL actions
 ├── Views/              # Web Forms pages (.aspx)
 ├── GymMe.csproj        # C# project file
